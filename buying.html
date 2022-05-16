@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Jetpuck. Главная страница</title>
+</head>
+<body>
+    <link rel="stylesheet" href="css/buying.css">
+    <header>
+        <div id="empty">
+            <div class="elementar1"></div>
+            <div class="elementar2">
+                <div><span id="shopname"></span></div>
+                <div><span id="shopdescription"></span></div>
+                <div><span id="number"></span></div>
+            </div>
+            <script>
+                txt="<shop>";
+                txt=txt+"<shopname>Jetpuck</shopname>";
+                txt=txt+"<shopdescription>Магазин хоккейной атрибутики</shopdescription>";
+                txt=txt+"<number>+375-44-579-99-85</number>";
+                txt=txt+"</shop>";
+
+                if (window.DOMParser)
+                {
+                parser=new DOMParser();
+                xmlDoc=parser.parseFromString(txt,"text/xml");
+                }
+                else
+                {
+                xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+                xmlDoc.async=false;
+                xmlDoc.loadXML(txt);
+                }
+
+                document.getElementById("shopname").innerHTML=
+                xmlDoc.getElementsByTagName("shopname")[0].childNodes[0].nodeValue;
+                document.getElementById("shopdescription").innerHTML=
+                xmlDoc.getElementsByTagName("shopdescription")[0].childNodes[0].nodeValue;
+                document.getElementById("number").innerHTML=
+                xmlDoc.getElementsByTagName("number")[0].childNodes[0].nodeValue;
+        </script>
+            <div class="elementar3"><form><input type="search" name="searcher" placeholder="Поиск..."><form><input type="submit" value="" name="submit"></form></form></div>
+            <div class="elementar4"></div>
+            <div class="elementar5"></div>
+        </div>
+        <div class="menu-burger">
+            <span></span>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="catalog.html">Каталог</a>
+                </li>
+                <li><a href="personalization.html">Персонализация</a>
+                </li>
+                <li><a href="about_us.html">О нас</a></li>
+                <li><a href="comments.html">Отзывы</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="menu1.js"></script> 
+    <h1>Покупка</h1>
+    <div class="colorblock">
+            <input name="user" required placeholder="Ваше имя" id="some-input" onkeyup="checkParams()">
+            <input name="user" required placeholder="Ваш телефон" id="some-input" onkeyup="checkParams()">
+            <input name="user" required placeholder="Ваш адрес" id="some-input" onkeyup="checkParams()">
+            <input type="button" id="button" disabled value="Оформлено!">
+            <script>
+                document.querySelector("#button").onclick = function(){
+                alert("Спасибо за покупку! Скоро мы с Вами свяжемся.");
+                } 
+            </script>
+    </div>
+    <div id="for-home">
+        <a href="main-page.html"><h2>На главную</h2></a>
+    </div>
+    <footer>
+        <div class="navigation">
+            <div><a><p>Каталог</p></a></div>
+            <div><a><p>Персонализация</p></a></div>
+            <div><a><p>Мой кабинет</p></a></div>
+            <div><a><p>Контакты</p></a>
+            </div>
+            <div class="nav1">
+                <a>
+                    <ul>
+                        <li><a>Свитеры</a></li>
+                        <li><a>Бейсболки</a></li>
+                        <li><a>Шапки</a></li>
+                        <li><a>Клюшки</a></li>
+                        <li><a>Коньки</a></li>
+                        <li><a>Экипировка</a></li>
+                        <li><a>Сувениры</a></li>
+                    </ul>
+                </a>
+            </div>
+            <div class="nav1">
+                <a>
+                    <ul>
+                        <li><a>Свитеры</a></li>
+                        <li><a>Бейсболки</a></li>
+                        <li><a>Шапки</a></li>
+                    </ul>
+                </a>
+            </div>
+            <div class="nav1">
+                <a>
+                    <ul>
+                        <li><a>Войти</a></li>
+                        <li><a>Зарегистрироваться</a></li>
+                    </ul>
+                </a>
+            </div>
+            <div class="nav1">
+                <a>
+                    <ul style="justify-content:center;">
+                        <li>
+                            <a><img src="css/image/vk.svg" class="vk"></a>
+                        </li>
+                        <li><a><img src="css/image/instagram.png" class="instagram"></a></li>
+                        <li><a><img src="css/image/facebook.png" class="telega"></a></li>
+                    </ul>
+                </a> 
+            </div>
+        </div>
+    </footer>
+    <script>
+        function checkParams() {
+            var name = $('#some-input').val();
+            if(name.length != 0) {
+            $('#button').removeAttr('disabled');
+            } 
+            else {
+            $('#button').attr('disabled', 'disabled');
+            }
+}
+    </script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+</body>
+</html>

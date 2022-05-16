@@ -1,0 +1,815 @@
+@font-face {
+    font-family: 'Exo2';
+    src: url(fonts/Exo2.woff);
+}
+body{
+    margin:0;
+    padding:0;
+    background-color:#97BADB;
+    font-family:'Exo2';
+}
+header{
+top:0;
+left:0;
+right:0;  
+height:203px;
+background-color:#001E42;
+width: 100%;
+padding:0;
+position:relative;
+justify-content:center;
+}
+#empty{
+    display:grid;
+    grid-template-columns: 250px auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
+    grid-gap:20 0 0 0;
+}
+.elementar1{
+    grid-column-start:1;
+    grid-column-end:2;
+    background-image:url(image/drawing.png);
+    background-size:200px;
+    background-repeat: no-repeat;
+}
+.elementar2{
+    justify-content:center;
+}
+.elementar3{
+    grid-column-start:3;
+    grid-column-end:4;
+    line-height:203px;
+}
+.elementar4{
+    grid-column-start:4;
+    grid-column-end:5;
+    background-image:url(image/gate.svg);
+    background-size:80px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.elementar5{
+    grid-column-start:5;
+    grid-column-end:6;
+    background-image:url(image/avatar.svg);
+    background-size:80px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.nav ul{
+margin:0;
+padding:0;
+list-style-type:none;
+}
+.nav>ul>li{
+    display:inline;
+    position: relative;
+    padding: 0px;
+}
+.nav li a{
+    display:inline-block;
+    text-decoration:none;
+    background-color:#001E42;
+    border-bottom:2px solid white;
+    border-top:1px solid #97badb;
+    border-right:1px solid #97badb;
+    float:left;
+    width:378.56px;
+    font-family:'Exo2';
+    color:white;
+    text-decoration: none;
+    font-size: 30px;
+    text-align:center;
+}
+img{
+    vertical-align:middle;
+}
+p{
+    font-family:'Exo2';
+    color:white;
+    text-decoration: none;
+    font-size: 36px;
+    padding:45px;
+}
+h1{
+    font-family:'Exo2';
+    color:white;
+    text-decoration: none;
+    padding:0;
+    margin:0;
+    font-size:56px;
+    text-align:center;
+    font-weight: bold;
+    padding:50px;
+}
+h2{
+    font-family:'Exo2';
+    color: white;
+    text-decoration: none;
+    padding:0;
+    margin:0;
+    font-size:32px;
+    text-align:center;
+    font-weight: bold;
+}
+h3{
+    font-family:'Exo2';
+    color: white;
+    text-decoration: none;
+    font-size:24px;
+    text-align:center;
+    font-weight: bold;
+}
+input[type="submit"]{
+    background-color:red;
+    background-image: url(image/Untitled-1.svg);
+    background-position:center;
+    background-repeat: no-repeat;
+    width: 30px;
+    vertical-align:middle;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+input[type="search"]{
+    background-color:#a9a9a9;
+    font-family:'Exo2';
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    width: 300px;
+    justify-content:center;
+}
+button{
+    background-image:#a9a9a9;
+    width:90px;
+    height:90px;
+    justify-content:center;
+}
+.obr{
+    font-family:'Exo2';
+    background:#0035717f;
+    color:white;
+    padding:15px;
+    border-top: 1px solid white;
+    text-decoration: none;
+    font-size: 20px;
+    width:90px;
+}
+.colorblock{
+    background-image:url(image/iceh.jpg);
+    fill-opacity:90%;
+    width:100%;
+    padding-top:0px;
+    padding-bottom:30px;
+}
+.gridovka{
+    display:grid;
+    grid-template-columns: 350px 350px 350px;
+    grid-column-gap: 30px;
+    grid-row-gap:10px;
+    justify-content:center;
+}
+.tovar{
+    background-color:#001e42bb;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.tovar:hover{
+    border:2px solid yellow;
+    transform: scale(1.05);
+}
+.name{
+    color:white;
+    font-family:'Exo2';
+    font-weight:bolder;
+    text-align:left;
+}
+footer{
+display:block;
+top:0;
+left:0;
+right:0;  
+height:497px;
+background-color:#001E42;
+width: 100%;
+padding:0;
+position:relative;
+}
+.navigation{
+    display:grid;
+    grid-template-columns: 400px 400px 400px 120px;
+    grid-template-rows: 100px 100px 100px 100px;
+    grid-column-gap:15px;
+    grid-row-gap: 20px;
+}
+.nav1{
+    color:white;
+    font-size:22px;
+    font-family:'Exo2';
+}
+.nav1 li{
+    padding-top:10px;
+    list-style-type: none;
+    display:block;
+}
+.vk{
+    width:80px;
+}
+.instagram{
+    width:60px;
+}
+.telega{
+    width:60px;
+}
+#gridv{
+    padding:20px;
+}
+.photoblock{
+    height:250px;
+    width:290px;
+    margin-left:30px;
+    margin-top:20px;
+    position:center;
+    background-color: white;
+}
+#photo1{
+    background-image:url(image/anaheim.webp);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:290px;
+}
+#photo2{
+    background-image:url(image/Pittsburgh_Penguins_2.webp);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:235px;
+}
+#photo3{
+    background-image:url(image/22-4.webp);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:290px;
+}
+#photo4{
+    background-image:url(image/thumb.jfif);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:290px;
+}
+#photo5{
+    background-image:url(image/Stripe_Toronto_front_600x.webp);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:290px;
+}
+#photo6{
+    background-image:url(image/thumb\ \(1\).jfif);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:290px;
+}
+#photo7{
+    background-image:url(image/13855c1d59-1_1200x.jpg);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:290px;
+}
+#photo8{
+    background-image:url(image/0c7c483a6590807f6ccd795a6e11923b.jpg);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:240px;
+}
+#photo9{
+    background-image:url(image/ca50ee697d-1_1200x.jpg);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:290px;
+}
+#button{
+    font-family:'Exo2';
+    display:flex;
+    justify-content: center;
+    width: 40%;
+    line-height: 40px;
+    background-color:#97badb;
+    border:1px solid #001E42;
+    color:#001E42;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:30px;
+    font-size:24px;
+    border-radius:5px;
+}
+#button:hover{
+    opacity:80%;
+}
+a{
+    text-decoration: none;
+}
+#for-home{
+    padding:30px;
+    margin:50px;
+}
+#shopname{
+    font-family:'Exo2';
+    color:white;
+    font-size:48px;
+    font-weight:600;
+}
+#shopdescription{
+    font-family:'Exo2';
+    color:white;
+    font-size:32px;
+    font-weight:600;
+    padding-bottom:15px;
+}
+#number{
+    font-family:'Exo2';
+    color:white;
+    font-size:24px;
+    font-weight:600;
+    padding-bottom: 15px;
+}
+.elementar2 div{
+    padding-bottom:25px;
+}
+h4{
+    color:white;
+    font-size: 30px;
+    padding-bottom:1vh;
+}
+@media(max-width:600px){
+    header{
+        display:block;
+        top:0;
+        left:0;
+        right:0;  
+        height:203px;
+        background-color:#001E42;
+        width: 100%;
+        padding:0;
+        position:relative;
+        justify-content:center;
+    }
+    #empty{
+        display:grid;
+        grid-template-columns: 35vw 45vw 0vw 10vw 10vw;
+        grid-template-rows: auto auto auto auto;
+        grid-column-gap:0px;
+    }
+    .elementar1{
+        grid-column-start:1;
+        grid-column-end:2;
+        background-image:url(image/drawing.svg);
+        background-size:30vw;
+        background-repeat: no-repeat;
+    }
+    .elementar3{
+        display:none;
+    }
+    .elementar4{
+        background-size:8vw;
+    }
+    .elementar5{
+        background-size:8vw;
+    }
+    .naz{
+        padding-bottom:1.2vh
+    }
+    #shopname{
+        font-family:'Exo2';
+        color:white;
+        font-size:24px;
+        font-weight:600;
+    }
+    #shopdescription{
+        font-family:'Exo2';
+        color:white;
+        font-size:18px;
+        font-weight:600;
+    }
+    #number{
+        font-family:'Exo2';
+        color:white;
+        font-size:12px;
+        font-weight:600;
+    }
+.menu-burger {
+    position: relative;
+    width: 40px; 
+    height: 35px;
+    margin-left: 10px;
+    display:block;
+}
+.menu-burger span, .menu-burger:after, .menu-burger:before{
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    background: white;
+    margin: 0 auto;
+}
+.menu-burger span{
+    top: 16px;
+}
+.menu-burger:after, .menu-burger:before{
+    content: '';
+}
+.menu-burger:after{
+    bottom: 5px;
+}
+.menu-burger:before{
+    top: 5px;
+}
+.menu-burger.open span {
+    opacity:0; 
+    transition: 0.5s; 
+}
+.menu-burger.open:before {
+    transform: rotate(38deg);
+    top: 16px;
+    transition: 0.4s;
+}
+.menu-burger.open:after {
+    transform: rotate(-38deg);
+    bottom: 16px;
+    transition: 0.4s;
+}
+.nav{
+    display:block;
+    position: absolute;
+    padding-top: 0px;
+    left: -200%;
+    transition: all 0.4s ease;
+}
+.nav li a{
+    text-decoration:none;
+    background-color:#001E42;
+    box-shadow: 1px 1px 0 #97BADB inset, -1px -1px 0 white inset;
+    float:left;
+    width:80%;
+    color:white;
+    text-decoration: none;
+    font-size: 30px;
+    text-align:center;
+    font-weight:700;
+    position:relative;
+    display:block;
+}
+.nav li a:hover{
+    opacity:85%;
+}
+.nav.open {
+    left: 0;
+}
+.gridovka{
+    grid-template-columns: 60vw;
+    grid-row-gap:20px;
+    padding-top:20px;
+    padding-bottom:30px;
+} 
+.photoblock{
+    height:30vh;
+    width:50vw;
+    margin-left:5vw;
+    margin-top:2vh;
+    position:center;
+    background-color: white;
+}
+.nav1{
+color:white;
+font-size:9px;
+font-family:'Exo2';
+}
+.nav1 li{
+padding-top:10px;
+list-style-type: none;
+display:block;
+}
+h4{
+    color:white;
+    font-size: 12px;
+    padding-bottom:1vh;
+}
+footer{
+    display:block;
+    top:0;
+    left:0;
+    right:0;  
+    height:248px;
+    background-color:#001E42;
+    width: 100%;
+    padding:0;
+    position:relative;
+}
+.navigation{
+    display:grid;
+    grid-template-columns: 20% 28% 28% 9%;
+    grid-template-rows: 50px 50px 50px 50px;
+    grid-column-gap:5px;
+    grid-row-gap: 5px;
+    justify-content:center;
+}
+h4{
+    color:white;
+    font-size: 12px;
+    padding-bottom:1vh;
+}
+.vk{
+    width:5vw;
+}
+.instagram{
+    width:5vw;
+}
+.telega{
+    width:5vw;
+}
+#photo1{
+    background-image:url(image/anaheim.webp);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:50vw;
+}
+#photo2{
+    background-image:url(image/Pittsburgh_Penguins_2.webp);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:50vw;
+}
+#photo3{
+    background-image:url(image/22-4.webp);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:50vw;
+}
+#photo4{
+    background-image:url(image/thumb.jfif);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:50vw;
+}
+#photo5{
+    background-image:url(image/Stripe_Toronto_front_600x.webp);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:50vw;
+}
+#photo6{
+    background-image:url(image/thumb\ \(1\).jfif);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:50vw;
+}
+#photo7{
+    background-image:url(image/13855c1d59-1_1200x.jpg);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:50vw;
+}
+#photo8{
+    background-image:url(image/0c7c483a6590807f6ccd795a6e11923b.jpg);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:50vw;
+}
+#photo9{
+    background-image:url(image/ca50ee697d-1_1200x.jpg);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:50vw;
+}
+}
+/*@media(min-width:600px) and (max-width:768px){
+    header{
+        display:block;
+        top:0;
+        left:0;
+        right:0;  
+        height:203px;
+        background-color:#001E42;
+        width: 100%;
+        padding:0;
+        position:relative;
+        justify-content:center;
+        }
+    #empty{
+        display:grid;
+        grid-template-columns: 35vw 45vw 0vw 10vw 10vw;
+        grid-template-rows: auto auto auto auto;
+        grid-column-gap:0px;
+    }
+    .elementar1{
+        grid-column-start:1;
+        grid-column-end:2;
+        background-image:url(image/drawing.svg);
+        background-size:30vw;
+        background-repeat: no-repeat;
+    }
+    .elementar3{
+        display:none;
+    }
+    .elementar4{
+        background-size:8vw;
+    }
+    .elementar5{
+        background-size:8vw;
+    }
+    .naz{
+        padding-bottom:1.2vh
+    }
+    #shopname{
+        font-family:'Exo2';
+        color:white;
+        font-size:24px;
+        font-weight:600;
+    }
+    #shopdescription{
+        font-family:'Exo2';
+        color:white;
+        font-size:18px;
+        font-weight:600;
+    }
+    #number{
+        font-family:'Exo2';
+        color:white;
+        font-size:12px;
+        font-weight:600;
+    }
+.menu-burger {
+    position: relative;
+    width: 40px; 
+    height: 35px;
+    margin-left: 10px;
+    display:block;
+}
+.menu-burger span, .menu-burger:after, .menu-burger:before{
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    background: white;
+    margin: 0 auto;
+}
+.menu-burger span{
+    top: 16px;
+}
+.menu-burger:after, .menu-burger:before{
+    content: '';
+}
+.menu-burger:after{
+    bottom: 5px;
+}
+.menu-burger:before{
+    top: 5px;
+}
+.menu-burger.open span {
+    opacity:0; 
+    transition: 0.5s; 
+}
+.menu-burger.open:before {
+    transform: rotate(38deg);
+    top: 16px;
+    transition: 0.4s;
+}
+.menu-burger.open:after {
+    transform: rotate(-38deg);
+    bottom: 16px;
+    transition: 0.4s;
+}
+.nav{
+    display:block;
+    position: absolute;
+    padding-top: 0px;
+    left: -200%;
+    transition: all 0.4s ease;
+}
+.nav li a{
+    text-decoration:none;
+    background-color:#001E42;
+    box-shadow: 1px 1px 0 #97BADB inset, -1px -1px 0 white inset;
+    float:left;
+    width:80%;
+    color:white;
+    text-decoration: none;
+    font-size: 30px;
+    text-align:center;
+    font-weight:700;
+    position:relative;
+    display:block;
+}
+.nav li a:hover{
+    opacity:85%;
+}
+.nav.open {
+    left: 0;
+}
+.gridovka{
+    grid-template-columns: 60vw;
+    grid-row-gap:20px;
+    padding-top:20px;
+    padding-bottom:30px;
+} 
+.photoblock{
+    height:30vh;
+    width:50vw;
+    margin-left:5vw;
+    margin-top:2vh;
+    position:center;
+    background-color: white;
+}
+.nav1{
+color:white;
+font-size:9px;
+font-family:'Exo2';
+}
+.nav1 li{
+padding-top:10px;
+list-style-type: none;
+display:block;
+}
+footer{
+    display:block;
+    top:0;
+    left:0;
+    right:0;  
+    height:248px;
+    background-color:#001E42;
+    width: 100%;
+    padding:0;
+    position:relative;
+}
+.navigation{
+    display:grid;
+    grid-template-columns: 20% 28% 28% 9%;
+    grid-template-rows: 50px 50px 50px 50px;
+    grid-column-gap:5px;
+    grid-row-gap: 5px;
+}
+h4{
+    color:white;
+    font-size: 12px;
+    padding-bottom:1vh;
+}
+.vk{
+    width:5vw;
+}
+.instagram{
+    width:5vw;
+}
+.telega{
+    width:5vw;
+}
+#photo1{
+    background-image:url(image/anaheim.webp);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:50vw;
+}
+#photo2{
+    background-image:url(image/Pittsburgh_Penguins_2.webp);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:50vw;
+}
+#photo3{
+    background-image:url(image/22-4.webp);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:50vw;
+}
+#photo4{
+    background-image:url(image/thumb.jfif);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:50vw;
+}
+#photo5{
+    background-image:url(image/Stripe_Toronto_front_600x.webp);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:50vw;
+}
+#photo6{
+    background-image:url(image/thumb\ \(1\).jfif);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:50vw;
+}
+#photo7{
+    background-image:url(image/13855c1d59-1_1200x.jpg);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:50vw;
+}
+#photo8{
+    background-image:url(image/0c7c483a6590807f6ccd795a6e11923b.jpg);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:50vw;
+}
+#photo9{
+    background-image:url(image/ca50ee697d-1_1200x.jpg);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:50vw;
+}
+}*/

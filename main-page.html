@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">    	
+    <meta name="viewport" content="max-width=600px, initial-scale=1.0">
+    <title>Jetpuck. Главная страница</title>
+</head>
+<body>
+    <link rel="stylesheet" href="css/media.css" type="text/css" media="screen">
+    <header>
+        <div id="empty">
+            <div class="elementar1"></div>
+    <div class="elementar2">
+                <div><span id="shopname"></span></div>
+                <div><span id="shopdescription"></span></div>
+                <div><span id="number"></span></div>
+    </div>
+            <script>
+                txt="<shop>";
+                txt=txt+"<shopname>Jetpuck</shopname>";
+                txt=txt+"<shopdescription>Магазин хоккейной атрибутики</shopdescription>";
+                txt=txt+"<number>+375-44-579-99-85</number>";
+                txt=txt+"</shop>";
+                if (window.DOMParser)
+                {
+                parser=new DOMParser();
+                xmlDoc=parser.parseFromString(txt,"text/xml");
+                }
+                else
+                {
+                xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+                xmlDoc.async=false;
+                xmlDoc.loadXML(txt);
+                }
+                document.getElementById("shopname").innerHTML=
+                xmlDoc.getElementsByTagName("shopname")[0].childNodes[0].nodeValue;
+                document.getElementById("shopdescription").innerHTML=
+                xmlDoc.getElementsByTagName("shopdescription")[0].childNodes[0].nodeValue;
+                document.getElementById("number").innerHTML=
+                xmlDoc.getElementsByTagName("number")[0].childNodes[0].nodeValue;
+        </script>
+            <div class="elementar3"><form><input type="search" name="searcher" placeholder="Поиск..."><input type="submit" value="" name="submit"></form></div>
+            <div class="elementar4"></div>
+            <div class="elementar5"></div>
+        </div>
+        <div class="menu-burger">
+            <span></span>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="personalization.html">Персонализация</a></li>
+                <li><a href="about_us.html">О нас</a></li>
+                <li><a href="comments.html">Отзывы</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="menu1.js"></script> 
+    <div class="colorblock">
+        <div id="fotoanima">
+            <div class="first"><h3>Новые ретро-формы уже в продаже</h3></div>
+            <div class="secondary"><h3>Новая коллекция клюшек Bauer</h3></div>
+            <div class="third"><h3>Хоккейные сувениры для всей семьи</h3></div>
+        </div>
+        <link rel="stylesheet" href="slick/slick.css">
+        <link rel="stylesheet" href="slick/slick-theme.css">
+        <script src="jquery.min.js"></script>
+        <script src="slick.min.js"></script>
+        <script src="scrollmenu.js"></script>
+    </div>
+    <h1 class="onemorestyle">Преимущества</h1>
+        <div class="gridovka">
+            <div><img src="css/image/dollar.svg" class="dollar" alt="Доступная цена"><h2>Доступная цена</h2></div>
+            <div><img src="css/image/mark.svg" class="dollar" alt="Отличное качество"><h2>Отличное качество</h2></div>
+            <div><img src="css/image/track.svg" class="dollar" alt="Быстрая доставка"><h2>Быстрая доставка</h2></div>
+        </div>s
+    <div class="colorblock1">
+        <h1>Персонализация</h1>
+        <div id="bigblock">
+                <div class="persblock">
+                    <div class="persblock_photo1"></div>
+                    <div class="persblock_photo2"></div>
+                    <div class="persblock_photo3"></div>
+                </div>
+                <link rel="stylesheet" href="slick/slick.css">
+                <link rel="stylesheet" href="slick/slick-theme.css">
+                <script src="jquery.min.js"></script>
+                <script src="slick.min.js"></script>
+                <script src="scrollmenu1.js"></script>
+                <div class="div2"><h5>Персонализация - это нанесение своей фамилии или номера на выбранный Вами товар. Вам всего лишь нужно ввести в поле нужную информацию и принять изменение. Данная опция совершенно бесплатно!!!</h5></div>
+                <div><input type="button" value="Перейти к персонализации" onclick="window.location.href = 'personalization.html';"></div>
+        </div>
+    </div>
+    <div id="last_com">
+        <div class="gridel1" id="otz1"></div>
+        <div class="gridel2">Ivan Poleshuk</div>
+        <div class="gridel3">Болеет за Calgary Flames</div>
+        <div class="gridel4">Друзья очень рекомендовали посетить данный магазин. И, сказать честно, зайдя сюда, был потрясён! Очень широкий ассортимент товаров на любой вкус. Тематика завязана не только на НХЛ и КХЛ, но и на других лигах, что действительно здорово. Быстрая доставка и отличное качество! Моя оценка - 11 из 10!</div>
+        <div class="gridel1" id="otz2"></div>
+        <div class="gridel2">Radmir_Stein</div>
+        <div class="gridel3">Болеет за Detroit Red Wings</div>
+        <div class="gridel4">Отличный магазин! Приобрёл новые коньки пару месяцев назад. Очень удобные и качественно выполненные, а главное - недорогие. Всем рекомендую! Недавно заказал персонализованную бейсболку. </div>
+        <div class="gridel1" id="otz3"></div>
+        <div class="gridel2">Marta08</div>
+        <div class="gridel3">Болеет за Minnesota Wild</div>
+        <div class="gridel4">Мой восьмилетний сын занимается хоккеем. Покупали всё необходимое здесь. Обошлось вполне недорого. Очень нравится опция персонализации, всей семьёй сделали персональные джерси!</div>
+    </div>
+    <footer>
+        <div class="navigation">
+            <div><a href="catalog.html"><h4>Каталог</h4></a></div>
+            <div><a href="personalization.html"><h4>Персонализация</h4></a></div>
+            <div><a><h4>Мой кабинет</h4></a></div>
+            <div><a><h4>Контакты</h4></a>
+            </div>
+            <div class="nav1">
+                    <ul style="padding:0;margin:0">
+                        <li><a>Свитеры</a></li>
+                        <li><a>Бейсболки</a></li>
+                        <li><a>Шапки</a></li>
+                        <li><a>Клюшки</a></li>
+                        <li><a>Коньки</a></li>
+                        <li><a>Экипировка</a></li>
+                        <li><a>Сувениры</a></li>
+                    </ul>
+            </div>
+            <div class="nav1">
+                    <ul style="padding:0;margin:0;">
+                        <li><a>Свитеры</a></li>
+                        <li><a>Бейсболки</a></li>
+                        <li><a>Шапки</a></li>
+                    </ul>
+            </div>
+            <div class="nav1">
+                    <ul style="padding:0; margin:0">
+                        <li><a>Войти</a></li>
+                        <li><a>Зарегистрироваться</a></li>
+                    </ul>
+            </div>
+                    <ul style="padding:0; margin:0; list-style-type:none;">
+                        <li>
+                            <a><img src="css/image/vk.svg" class="vk" alt="vk"></a>
+                        </li>
+                        <li><a><img src="css/image/instagram.png" class="instagram" alt="instagram"></a></li>
+                        <li><a><img src="css/image/facebook.png" class="telega" alt="facebook"></a></li>
+                    </ul>
+        </div>
+    </footer>
+</body>
+</html>

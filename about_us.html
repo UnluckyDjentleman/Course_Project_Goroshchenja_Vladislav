@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Jetpuck. Главная страница</title>
+</head>
+<body>
+    <link rel="stylesheet" href="css/about.css">
+        <meta name="viewport" content="max-width=600px, initial-scale=1.0">
+    <header>
+        <div id="empty">
+            <div class="elementar1"></div>
+            <div class="elementar2">
+                <div><span id="shopname"></span></div>
+                <div><span id="shopdescription"></span></div>
+                <div><span id="number"></span></div>
+            </div>
+            <script>
+                txt="<shop>";
+                txt=txt+"<shopname>Jetpuck</shopname>";
+                txt=txt+"<shopdescription>Магазин хоккейной атрибутики</shopdescription>";
+                txt=txt+"<number>+375-44-579-99-85</number>";
+                txt=txt+"</shop>";
+
+                if (window.DOMParser)
+                {
+                parser=new DOMParser();
+                xmlDoc=parser.parseFromString(txt,"text/xml");
+                }
+                else
+                {
+                xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+                xmlDoc.async=false;
+                xmlDoc.loadXML(txt);
+                }
+
+                document.getElementById("shopname").innerHTML=
+                xmlDoc.getElementsByTagName("shopname")[0].childNodes[0].nodeValue;
+                document.getElementById("shopdescription").innerHTML=
+                xmlDoc.getElementsByTagName("shopdescription")[0].childNodes[0].nodeValue;
+                document.getElementById("number").innerHTML=
+                xmlDoc.getElementsByTagName("number")[0].childNodes[0].nodeValue;
+        </script>
+            <div class="elementar3"><form><input type="search" name="searcher" placeholder="Поиск..."><form><input type="submit" value="" name="submit"></form></form></div>
+            <div class="elementar4"></div>
+            <div class="elementar5"></div>
+        </div>
+        <div class="menu-burger">
+            <span></span>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="catalog.html">Каталог</a>
+                </li>
+                <li><a href="personalization.html">Персонализация</a>
+                </li>
+                <li><a href="about_us.html">О нас</a></li>
+                <li><a href="comments.html">Отзывы</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="menu1.js"></script> 
+    <h1>О нас</h1>
+    <div class="colorblock">
+        <div class="logo"></div>
+        <div class="about">Jetpuck - интернет-магазин, специализирующийся на продаже хоккейной атрибутики и товаров, связанных с данным видом спорта. 
+Мы предлагаем широкий ассортимент товаров как для детей, так и для взрослых. Мы доступны как в живом магазине, так и в сети Интернет. 
+        </div>
+        <div class="contacts">
+            <div class="forma">
+                <form>
+                    <div class="formal">
+                    <label class="param">Офис:</label>
+                    <label>ул. Илимская, 27а</label>
+                    </div>
+                    <div class="formal">
+                        <label class="param">Склад:</label>
+                        <label>ул. Илимская, 27а</label>
+                    </div>
+                    <div class="formal">
+                        <label class="param">Телефон:</label>
+                        <label>+375-44-579-99-85</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2351.293265181622!2d27.680816815827978!3d53.8909912800968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcdce3413484b%3A0x86056b0847d4b619!2z0YPQuy4g0JjQu9C40LzRgdC60LDRjyAyN9CwLCDQnNC40L3RgdC6!5e0!3m2!1sru!2sby!4v1652428086448!5m2!1sru!2sby" width="400" height="305" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </div>
+    <div id="for-home">
+        <a href="main-page.html"><h2>На главную</h2></a>
+    </div>
+    <footer>
+        <div class="navigation">
+            <div><a><h4>Каталог</h4></a></div>
+            <div><a><h4>Персонализация</h4></a></div>
+            <div><a><h4>Мой кабинет</h4></a></div>
+            <div><a><h4>Контакты</h4></a></div>
+            <div class="nav1">
+                <a>
+                    <ul>
+                        <li><a>Свитеры</a></li>
+                        <li><a>Бейсболки</a></li>
+                        <li><a>Шапки</a></li>
+                        <li><a>Клюшки</a></li>
+                        <li><a>Коньки</a></li>
+                        <li><a>Экипировка</a></li>
+                        <li><a>Сувениры</a></li>
+                    </ul>
+                </a>
+            </div>
+            <div class="nav1">
+                <a>
+                    <ul>
+                        <li><a>Свитеры</a></li>
+                        <li><a>Бейсболки</a></li>
+                        <li><a>Шапки</a></li>
+                    </ul>
+                </a>
+            </div>
+            <div class="nav1">
+                <a>
+                    <ul>
+                        <li><a>Войти</a></li>
+                        <li><a>Зарегистрироваться</a></li>
+                    </ul>
+                </a>
+            </div>
+            <div class="nav1">
+                <a>
+                    <ul style="justify-content:center;">
+                        <li>
+                            <a><img src="css/image/vk.svg" class="vk"></a>
+                        </li>
+                        <li><a><img src="css/image/instagram.png" class="instagram"></a></li>
+                        <li><a><img src="css/image/facebook.png" class="telega"></a></li>
+                    </ul>
+                </a> 
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

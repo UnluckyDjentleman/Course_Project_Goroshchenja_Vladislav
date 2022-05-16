@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="max-width=600px, initial-scale=1.0">
+    <title>Jetpuck. Главная страница</title>
+</head>
+<body>
+    <link rel="stylesheet" href="css/tovar.css" />
+    <header>
+        <div id="empty">
+            <div class="elementar1"></div>
+            <div class="elementar2">
+                <div><span id="shopname"></span></div>
+                <div><span id="shopdescription"></span></div>
+                <div><span id="number"></span></div>
+            </div>
+            <script>
+                txt="<shop>";
+                txt=txt+"<shopname>Jetpuck</shopname>";
+                txt=txt+"<shopdescription>Магазин хоккейной атрибутики</shopdescription>";
+                txt=txt+"<number>+375-44-579-99-85</number>";
+                txt=txt+"</shop>";
+
+                if (window.DOMParser)
+                {
+                parser=new DOMParser();
+                xmlDoc=parser.parseFromString(txt,"text/xml");
+                }
+                else
+                {
+                xmlDoc=new ActiveXObject("Microsoft.XMLDOM");
+                xmlDoc.async=false;
+                xmlDoc.loadXML(txt);
+                }
+
+                document.getElementById("shopname").innerHTML=
+                xmlDoc.getElementsByTagName("shopname")[0].childNodes[0].nodeValue;
+                document.getElementById("shopdescription").innerHTML=
+                xmlDoc.getElementsByTagName("shopdescription")[0].childNodes[0].nodeValue;
+                document.getElementById("number").innerHTML=
+                xmlDoc.getElementsByTagName("number")[0].childNodes[0].nodeValue;
+        </script>
+            <div class="elementar3"><form><input type="search" name="searcher" placeholder="Поиск..."><form><input type="submit" value="" name="submit"></form></form></div>
+            <div class="elementar4"></div>
+            <div class="elementar5"></div>
+        </div>
+        <div class="menu-burger">
+            <span></span>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a>Каталог</a>
+                </li>
+                <li><a>Персонализация</a>
+                </li>
+                <li><a>О нас</a></li>
+                <li><a>Отзывы</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="menu1.js"></script> 
+    <h1>Джерси Монреаль Канадиенс</h1>
+    <div class="colorblock">
+        <div class="phototov"></div>
+        <div class="forma">
+            <form>
+                <div class="formal">
+                    <label for="size" class="param">Размер</label>
+                    <select>
+                        <optgroup label="Мужские">
+                            <option>46</option>
+                            <option>48</option>
+                            <option>50</option>
+                            <option>52</option>
+                            <option>54</option>
+                        </optgroup>
+                        <optgroup label="Женские">
+                            <option>42</option>
+                            <option>44</option>
+                            <option>46</option>
+                            <option>48</option>
+                            <option>50</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="formal">
+                    <label for="color" class="param">Цвет</label><label><span id="colors"></span></label>
+                </div>
+                <div class="formal">
+                    <label for="material" class="param">Материал</label><label for="nameofmat"><span id="material"></span></label>
+                </div>
+                <div class="formal">
+                    <label for="distr" class="param">Производитель</label><label for="country"><span id="country"></span></label>
+                </div>
+                <div class="formal">
+                    <label for="cost" class="param">Стоимость</label><label for="znachenie"><span id="cost"></span></label>
+                </div>
+            </form>
+            <script type="text/javascript">
+            xmlhttp=new XMLHttpRequest();
+            xmlhttp.open("GET","tovar.xml",false);
+            xmlhttp.send();
+            xmlDoc=xmlhttp.responseXML;
+            document.getElementById("colors").innerHTML=
+            xmlDoc.getElementsByTagName("colors")[0].childNodes[0].nodeValue;
+            document.getElementById("material").innerHTML=
+            xmlDoc.getElementsByTagName("material")[0].childNodes[0].nodeValue;
+            document.getElementById("country").innerHTML=
+            xmlDoc.getElementsByTagName("country")[0].childNodes[0].nodeValue;
+            document.getElementById("cost").innerHTML=
+            xmlDoc.getElementsByTagName("cost")[0].childNodes[0].nodeValue;
+            </script>
+        </div>
+        <input type="button" class="basket" value="В корзину">
+        <input type="button" class="click" value="Купить в один клик" onclick="window.location.href = 'buying.html';">
+    </div>
+    <div class="gridovka">
+        <div class="tovar"><a><div class="photoblock" id="photo2"></div><h2>Клюшка Bauer чёрно - жёлтая</h2><h3>20.00 руб</h3></a></div>
+        <div class="tovar"><div class="photoblock" id="photo3"></div><h2>Коньки CCM чёрные мужские</h2><h3>20.00 руб</h3></div>
+        <div class="tovar"><div class="photoblock" id="photo4"></div><h2>Шлем полевого игрока EFSI</h2><h3>20.00 руб</h3></div>
+        <div class="tovar"><div class="photoblock" id="photo5"></div><h2>Бейсболка Ванкувер Кэнакс синяя</h2><h3>20.00 руб</h3></div>
+        <div class="tovar"><div class="photoblock" id="photo6"></div><h2>Нагрудник хоккейный Bauer</h2><h3>20.00 руб</h3></div>
+        <div class="tovar"><div class="photoblock" id="photo7"></div><h2>Шайба сувенирная Швеция</h2><h3>20.00 руб</h3></div>
+        <div class="tovar"><div class="photoblock" id="photo8"></div><h2>Ретро - джерси Сан - Хосе Шаркс </h2><h3>20.00 руб</h3></div>
+        <div class="tovar"><div class="photoblock" id="photo9"></div><h2>Майка Питтсбург Пингвинз</h2><h3>20.00 руб</h3></div>
+        <div class="tovar"><div class="photoblock" id="photo10"></div><h2>Джерси ТПС (Турку, Финляндия)</h2><h3>20.00 руб</h3></div>
+        <div class="tovar"><div class="photoblock" id="photo11"></div><h2>Худи Аризона Койотис, бордовая</h2><h3>20.00 руб</h3></div>
+        <div class="tovar"><div class="photoblock" id="photo12"></div><h2>Хоккейные наколенники</h2><h3>20.00 руб</h3></div>
+        <div class="tovar"><div class="photoblock" id="photo13"></div><h2>Щитки вратарские Bauer</h2><h3>20.00 руб</h3></div>
+        <div class="tovar"><div class="photoblock" id="photo14"></div><h2>Краги хоккейные Sherwood</h2><h3>20.00 руб</h3></div>
+        <div class="tovar"><div class="photoblock" id="photo15"></div><h2>Нашивка NHL, логотип лиги</h2><h3>20.00 руб</h3></div>
+        <div class="tovar"><div class="photoblock" id="photo16"></div><h2>Сувенирная фигурка Стэмкос</h2><h3>20.00 руб</h3></div>
+        <div class="tovar"><div class="photoblock" id="photo17"></div><h2>Шорты хоккейные Bauer</h2><h3>20.00 руб</h3></div>
+        <div class="tovar"><div class="photoblock" id="photo18"></div><h2>Карточки сборная США 1980-е</h2><h3>20.00 руб</h3></div>
+    </div>
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <script src="jquery.min.js"></script>
+    <script src="slick.min.js"></script>
+    <script src="mainchar.js"></script>
+    <div id="for-home">
+        <a href="main-page.html"><h2>На главную</h2></a>
+    </div>
+    <footer>
+        <div class="navigation">
+            <div><a><h4>Каталог</h4></a></div>
+            <div><a><h4>Персонализация</h4></a></div>
+            <div><a><h4>Мой кабинет</h4></a></div>
+            <div><a><h4>Контакты</h4></a>
+            </div>
+            <div class="nav1">
+                <a>
+                    <ul style="padding:0;margin:0">
+                        <li><a>Свитеры</a></li>
+                        <li><a>Бейсболки</a></li>
+                        <li><a>Шапки</a></li>
+                        <li><a>Клюшки</a></li>
+                        <li><a>Коньки</a></li>
+                        <li><a>Экипировка</a></li>
+                        <li><a>Сувениры</a></li>
+                    </ul>
+                </a>
+            </div>
+            <div class="nav1">
+                <a>
+                    <ul style="padding:0;margin:0">
+                        <li><a>Свитеры</a></li>
+                        <li><a>Бейсболки</a></li>
+                        <li><a>Шапки</a></li>
+                    </ul>
+                </a>
+            </div>
+            <div class="nav1">
+                <a>
+                    <ul style="padding:0;margin:0">
+                        <li><a>Войти</a></li>
+                        <li><a>Зарегистрироваться</a></li>
+                    </ul>
+                </a>
+            </div>
+                    <ul style="padding:0;margin:0;list-style-type:none;">
+                        <li>
+                            <a> <img src="css/image/vk.svg" class="vk">              
+                            </a>
+                        </li>
+                        <li><a><img src="css/image/instagram.png" class="instagram"></a></li>
+                        <li><a><img src="css/image/facebook.png" class="telega"></a></li>
+                    </ul>
+        </div>
+    </footer>
+</body>
+</html>
