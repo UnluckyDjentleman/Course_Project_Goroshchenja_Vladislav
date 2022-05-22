@@ -1,3 +1,5 @@
+$col:#97badb;
+$color:#001E42;
 @font-face {
     font-family: 'Exo2';
     src: url(fonts/Exo2.woff);
@@ -5,7 +7,7 @@
 body{
     margin:0;
     padding:0;
-    background-color:#97BADB;
+    background-color:$col;
     font-family:'Exo2';
 }
 header{
@@ -13,7 +15,7 @@ top:0;
 left:0;
 right:0;  
 height:203px;
-background-color:#001E42;
+background-color:$color;
 width: 100%;
 padding:0;
 position:relative;
@@ -56,30 +58,32 @@ justify-content:center;
     background-repeat: no-repeat;
     background-position: center;
 }
-.nav ul{
-margin:0;
-padding:0;
-list-style-type:none;
+.nav{
+    ul{
+        margin:0;
+        padding:0;
+        list-style-type:none;
+    }
 }
 .nav>ul>li{
     display:inline;
     position: relative;
     padding: 0px;
 }
-.nav li a{
-    display:inline-block;
-    text-decoration:none;
-    background-color:#001E42;
-    border-bottom:2px solid white;
-    border-top:1px solid #97badb;
-    border-right:1px solid #97badb;
-    float:left;
-    width:378.56px;
-    font-family:'Exo2';
-    color:white;
-    text-decoration: none;
-    font-size: 30px;
-    text-align:center;
+.nav{
+    li a{
+        display:inline-block;
+        text-decoration:none;
+        background-color:$color;
+        box-shadow: 1px 1px 0 $col inset, -1px -1px 0 white inset;
+        float:left;
+        width:25%;
+        font-family:'Exo2';
+        color:white;
+        text-decoration: none;
+        font-size: 30px;
+        text-align:center;
+    }
 }
 img{
     vertical-align:middle;
