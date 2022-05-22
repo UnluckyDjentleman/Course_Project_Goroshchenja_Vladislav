@@ -1,14 +1,14 @@
 $col:#97badb;
 $color:#001E42;
+@font-face {
+    font-family: 'Exo2';
+    src: url(fonts/Exo2.woff);
+}
 body{
     margin:0;
     padding:0;
     background-color:$col;
-}
-.body{
-    display:flex;
-    margin:0;
-    padding:0;
+    font-family: 'Exo2';
 }
 header{
 display:block;
@@ -69,18 +69,16 @@ justify-content:center;
         display:inline-block;
         text-decoration:none;
         background-color:$color;
-        border-bottom:2px solid white;
-        border-top:1px solid $col;
-        border-right:1px solid $col;
+        box-shadow: 1px 1px 0 $col inset, -1px -1px 0 white inset;
         float:left;
-        width:378.56px;
+        width:25%;
         font-family:'Exo2';
         color:white;
         text-decoration: none;
         font-size: 30px;
         text-align:center;
     }
-    &:hover{
+    li a:hover{
         background-color:#001e428e;
     }
 }
@@ -93,25 +91,19 @@ img{
     vertical-align:middle;
 }
 p{
-    font-family:'Exo2';
     color:white;
     text-decoration: none;
     font-size: 36px;
     padding:45px;
 }
 h1{
-    font-family:'Exo2';
     color:white;
     text-decoration: none;
     padding:0;
     margin:0;
-    font-size:56px;
+    font-size:10vh;
     text-align:center;
     font-weight: bold;
-}
-@font-face {
-    font-family: 'Exo2';
-    src: url('Exo2.woff');
 }
 input[type="submit"]{
     background-color:red;
@@ -147,6 +139,12 @@ input[type="search"]{
     width:100%;
     padding:0;
 }
+.colorblock1 {
+    background-image: url(image/iceh.jpg);
+    fill-opacity: 90%;
+    height: 556px;
+    width: 100%;
+    padding: 0; }
 #fotoanima{
     position:center;
     width:1163px;
@@ -183,22 +181,12 @@ h3{
     font-size:6vh;
     text-shadow: 1px 1px 1px #5A5A5A;
 }
-stylish{
-    color:white;
-    text-align:center;
-    padding-top:50vh;
-    margin:0;
-    text-decoration: none;
-    font-size:6vh;
-    text-shadow: 1px 1px 1px #5A5A5A;
-}
 .onemorestyle{
-    font-family:'Exo2';
     color:#001C4A;
     text-decoration: none;
     padding:0;
     margin:0;
-    font-size:56px;
+    font-size:10vh;
     text-align:center;
     font-weight: bold;
     margin-bottom:30px;
@@ -213,7 +201,6 @@ stylish{
     grid-row-gap: 0px;
 }
 h2{
-    font-family:'Exo2';
     color:$color;
     text-decoration: none;
     padding:0;
@@ -294,9 +281,9 @@ input[type="button"]{
     border-radius:10px;
     font-family:'Exo2';
     font-size:20px;
-}
-input[type="button"]:hover{
-    border:1px solid yellow;
+    &:hover{
+        border:1px solid yellow;
+    }
 }
 footer{
 display:block;
@@ -314,6 +301,7 @@ position:relative;
     grid-template-rows: 100px 100px 100px 100px;
     grid-column-gap:5px;
     grid-row-gap: 2px;
+    margin-left:75px;
 }
 h4{
     color:white;
@@ -323,12 +311,11 @@ h4{
 .nav1{
     color:white;
     font-size:22px;
-    font-family:'Exo2';
-}
-.nav1 li{
-    padding-top:10px;
-    list-style-type: none;
-    display:block;
+    li{
+        padding-top:10px;
+        list-style-type: none;
+        display:block;
+    }
 }
 #last_com{
     padding:50px;
@@ -366,17 +353,17 @@ h4{
 #otz1{
     background-image:url(image/chel.jpg);
     background-size: 360px;
-    position:center;
+    background-position:center;
 }
 #otz2{
     background-image:url(image/tyanjpg.jpg);
     background-size: 360px;
-    position:center;
+    background-position:center;
 }
 #otz3{
     background-image:url(image/kit.jpeg);
     background-size: 360px;
-    position:center;
+    background-position:center;
 }
 #shopname{
     color:white;
@@ -409,27 +396,15 @@ h4{
 }
 @media all and (max-width:600px){
     h1{
-        font-family:'Exo2';
-        color:white;
-        text-decoration: none;
-        padding:0;
-        margin:0;
         font-size:3vh;
-        text-align:center;
-        font-weight: bold;
     }
     #empty{
-        display:grid;
         grid-template-columns: 35vw 45vw 0vw 10vw 10vw;
         grid-template-rows: auto auto auto auto;
         grid-column-gap:0px;
     }
     .elementar1{
-        grid-column-start:1;
-        grid-column-end:2;
-        background-image:url(image/drawing.svg);
         background-size:30vw;
-        background-repeat: no-repeat;
     }
     .elementar3{
         display:none;
@@ -444,25 +419,18 @@ h4{
         padding-bottom:1.2vh
     }
     #shopname{
-        font-family:'Exo2';
-        color:white;
         font-size:24px;
-        font-weight:600;
     }
     #shopdescription{
-        font-family:'Exo2';
-        color:white;
         font-size:18px;
-        font-weight:600;
     }
     #number{
-        font-family:'Exo2';
-        color:white;
         font-size:12px;
-        font-weight:600;
     }
     #fotoanima{
+        padding-top:3px;
         width:90vw;
+        margin:0px auto 5vw;
     }
     .first{
         width:90vw;
@@ -474,7 +442,6 @@ h4{
         width:90vw;
     }
     h2{
-        font-family:'Exo2';
         font-size:2.4vh;
     }
     .menu-burger {
@@ -525,15 +492,6 @@ h4{
             transition: all 0.4s ease;
             z-index: 999;
             li a{
-                text-decoration:none;
-                background-color:#001E42;
-                box-shadow: 1px 1px 0 $col inset, -1px -1px 0 white inset;
-                float:left;
-                width:80%;
-                color:white;
-                text-decoration: none;
-                font-size: 30px;
-                text-align:center;
                 font-weight:700;
                 position:relative;
                 display:block;
@@ -546,14 +504,7 @@ h4{
             }
         }
         .onemorestyle{
-            font-family:'Exo2';
-            color:#001C4A;
-            text-decoration: none;
-            padding:0;
-            margin:0;
             font-size:4vh;
-            text-align:center;
-            font-weight: bold;
             margin-bottom:3vh;
         }
         .gridovka{
@@ -589,7 +540,7 @@ h4{
                 list-style-type: none;
             }
             li a{
-                text-decoration-style: none;
+                text-decoration: none;
             }
         }
         .colorblock{
@@ -601,13 +552,9 @@ h4{
             padding-top:5vh;
         }
         p{
-                font-family:'Exo2';
-                color:white;
-                text-decoration: none;
                 font-size: 1vh;
                 padding-left:4vw;
                 padding-top:0.5vh;
-                text-decoration-style: none;
         }
             .vk{
                 width:5vw;
@@ -621,8 +568,6 @@ h4{
             #bigblock{
                 width:85vw;
                 height:20vh;
-                background-color: rgba(0, 0, 0, 0.696);
-                justify-content: center;
                 padding-top:1vh;
                 display:grid;
                 grid-template-columns:25% 30% 30%;
@@ -630,53 +575,15 @@ h4{
                 grid-column-gap: 5%;
                 grid-row-gap: 10%;
             }
-            .div2{
-                grid-column-start:2;
-                grid-column-end:4;
-            }
-            .persblock{
-                grid-row-start:1;
-                grid-row-end:3;
-                border:1px solid #97BADB;
-                background-position:center;
-                background-repeat:no-repeat;
-            }
             input[type="button"]{
                 width:50vw;
                 height:3vh;
                 align-self: center;
-                background-color:white;
                 border-radius:10px;
-                font-family:'Exo2';
                 font-size:8px;
-            }
-            input[type="button"]:hover{
-                border:1px solid yellow;
-            }
-            #styles{
-                font-family:'Exo2';
-                color:white;
-                text-align:center;
-                padding-top:25vh;
-                margin:0;
-                text-decoration: none;
-                font-size:24px;
-                text-shadow: 1px 1px 1px #5A5A5A;
-            }
-            #styles1{
-                font-family:'Exo2';
-                color:white;
-                text-align:center;
-                padding-top:15.5vh;
-                margin:0;
-                text-decoration: none;
-                font-size:24px;
-                text-shadow: 1px 1px 1px #5A5A5A;
             }
             #last_com{
                 padding:20px;
-                display:grid;
-                justify-content: center;
                 grid-template-columns:75px 75px 75px;
                 grid-template-rows: 75px;
                 grid-column-gap: 40px;
@@ -693,8 +600,6 @@ h4{
                 grid-row-start:2;
                 grid-row-end:3;
                 font-size:10px;
-                font-family:'Exo2';
-                text-align:center;
             }
             .gridel3{
                 grid-row-start:3;
@@ -710,22 +615,13 @@ h4{
                 font-family:'Exo2';
             }
             #otz1{
-                background-image:url(image/chel.jpg);
                 background-size: 125px;
-                position:center;
-                background-repeat: no-repeat;
             }
             #otz2{
-                background-image:url(image/tyanjpg.jpg);
                 background-size: 125px;
-                position:center;
-                background-repeat: no-repeat;
             }
             #otz3{
-                background-image:url(image/kit.jpeg);
-                background-size: 125px;
-                position:center;
-                background-repeat: no-repeat;                
+                background-size: 125px;                
             }
             header{
                 display:block;
@@ -739,20 +635,10 @@ h4{
                 position:relative;
                 justify-content:center;
             }
-            footer{
-                display:block;
-                top:0;
-                left:0;
-                right:0;  
+            footer{  
                 height:248px;
-                background-color:#001E42;
-                width: 100%;
-                padding:0;
-                position:relative;
             }
             .colorblock1{
-                background-image:url(image/iceh.jpg);
-                fill-opacity:90%;
                 height:35vh;
                 max-width: 1920px;
                 padding-left:10vw;
@@ -760,23 +646,14 @@ h4{
                 padding-top:0.5vh;
             }
             #shopname{
-                font-family:'Exo2';
-                color:white;
                 font-size:4vh;
-                font-weight:600;
             }
             #shopdescription{
-                font-family:'Exo2';
-                color:white;
                 font-size:2vh;
-                font-weight:600;
                 padding-bottom:1vh;
             }
             #number{
-                font-family:'Exo2';
-                color:white;
                 font-size:1vh;
-                font-weight:600;
                 padding-bottom: 1vh;
             }
             h3{
