@@ -1,3 +1,5 @@
+$col:#97badb;
+$color:#001E42;
 @font-face {
     font-family: 'Exo2';
     src: url(fonts/Exo2.woff);
@@ -67,11 +69,12 @@ header{
         position: relative;
         padding: 0px;
     }
-    .nav li a{
+    .nav{
+        li a{
         display:inline-block;
         text-decoration:none;
-        background-color:#001E42;
-        box-shadow: 1px 1px 0 #97BADB inset, -1px -1px 0 white inset;
+        background-color:$color;
+        box-shadow: 1px 1px 0 $col inset, -1px -1px 0 white inset;
         float:left;
         width:25%;
         font-family:'Exo2';
@@ -79,9 +82,10 @@ header{
         text-decoration: none;
         font-size: 4vh;
         text-align:center;
-    }
-    .nav li a:hover{
-        background-color:#001e428e;
+        }
+        &:hover{
+            background-color:#001e428e;
+        }
     }
 p{
     color:white;
@@ -161,10 +165,10 @@ input[type="search"]{
     background-color:#001e42bb;
     margin-top:1vh;
     margin-bottom:1vh;
-}
-.tovar:hover{
-    border:2px solid yellow;
-    transform: scale(1.05);
+    &:hover{
+        border:2px solid yellow;
+        transform: scale(1.05);
+    }
 }
 .name{
     color:white;
@@ -178,7 +182,7 @@ footer{
     left:0;
     right:0;  
     height:420px;
-    background-color:#001E42;
+    background-color:$color;
     width: 100%;
     padding:0;
     position:relative;
@@ -198,12 +202,11 @@ footer{
     .nav1{
         color:white;
         font-size:22px;
-        font-family:'Exo2';
-    }
-    .nav1 li{
-        padding-top:10px;
-        list-style-type: none;
-        display:block;
+        li{
+            padding-top:10px;
+            list-style-type: none;
+            display:block;
+        }
     }
     .vk{
         width:5vw;
@@ -339,18 +342,18 @@ footer{
     justify-content: center;
     width: 40%;
     line-height: 40px;
-    background-color:#97badb;
-    border:1px solid #001E42;
-    color:#001E42;
+    background-color:$col;
+    border:1px solid $color;
+    color:$color;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     margin-top:30px;
     font-size:24px;
     border-radius:5px;
-}
-#button:hover{
-    opacity:80%;
+    &:hover{
+        opacity:80%;
+    }
 }
 a{
     text-decoration: none;
@@ -379,8 +382,10 @@ a{
     font-weight:600;
     padding-bottom: 15px;
 }
-.elementar2 div{
-    padding-bottom:25px;
+.elementar2{
+    div{
+        padding-bottom:25px;
+    }
 }
 @media all and (max-width:600px){
     header{
@@ -389,7 +394,7 @@ a{
         left:0;
         right:0;  
         height:203px;
-        background-color:#001E42;
+        background-color:$color;
         width: 100%;
         padding:0;
         position:relative;
@@ -444,39 +449,41 @@ a{
     height: 35px;
     margin-left: 10px;
     display:block;
-}
-.menu-burger span, .menu-burger:after, .menu-burger:before{
-    height: 3px;
-    width: 100%;
-    position: absolute;
-    background: white;
-    margin: 0 auto;
-}
-.menu-burger span{
-    top: 16px;
-}
-.menu-burger:after, .menu-burger:before{
-    content: '';
-}
-.menu-burger:after{
-    bottom: 5px;
-}
-.menu-burger:before{
-    top: 5px;
-}
-.menu-burger.open span {
-    opacity:0; 
-    transition: 0.5s; 
-}
-.menu-burger.open:before {
-    transform: rotate(38deg);
-    top: 16px;
-    transition: 0.4s;
-}
-.menu-burger.open:after {
-    transform: rotate(-38deg);
-    bottom: 16px;
-    transition: 0.4s;
+    span{
+        top: 16px;
+    }
+    span, &:after, &:before{
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        background: white;
+        margin: 0 auto;
+    }
+    &:after, &:before{
+        content: '';
+    }
+    &:after{
+        bottom: 5px;
+    }
+    &:before{
+        top: 5px;
+    }
+    .open{
+        span{
+            opacity:0; 
+            transition: 0.5s; 
+        }
+        &:before {
+            transform: rotate(38deg);
+            top: 16px;
+            transition: 0.4s;
+        }
+        &:after {
+            transform: rotate(-38deg);
+            bottom: 16px;
+            transition: 0.4s;
+        }
+    }
 }
 .nav{
     display:block;
@@ -484,20 +491,20 @@ a{
     padding-top: 0px;
     left: -200%;
     transition: all 0.4s ease;
-}
-.nav li a{
-    text-decoration:none;
-    background-color:#001E42;
-    box-shadow: 1px 1px 0 #97BADB inset, -1px -1px 0 white inset;
-    float:left;
-    width:80%;
-    color:white;
-    text-decoration: none;
-    font-size: 30px;
-    text-align:center;
-    font-weight:700;
-    position:relative;
-    display:block;
+    li a{
+        text-decoration:none;
+        background-color:$color;
+        box-shadow: 1px 1px 0 $col inset, -1px -1px 0 white inset;
+        float:left;
+        width:80%;
+        color:white;
+        text-decoration: none;
+        font-size: 30px;
+        text-align:center;
+        font-weight:700;
+        position:relative;
+        display:block;
+    }
 }
 .nav li a:hover{
     opacity:85%;
@@ -520,14 +527,14 @@ a{
     background-color: white;
 }
 .nav1{
-color:white;
+    color:white;
 font-size:9px;
 font-family:'Exo2';
-}
-.nav1 li{
-padding-top:10px;
-list-style-type: none;
-display:block;
+    li{
+        padding-top:10px;
+        list-style-type: none;
+        display:block;
+    }
 }
 footer{
     display:block;
@@ -535,7 +542,7 @@ footer{
     left:0;
     right:0;  
     height:248px;
-    background-color:#001E42;
+    background-color:$color;
     width: 100%;
     padding:0;
     position:relative;
@@ -562,111 +569,57 @@ h4{
     width:5vw;
 }
 #photo1{
-    background-image:url(image/jersey1.jfif);
-    background-position:center;
-    background-repeat:no-repeat;
     background-size:50vw;
 }
 #photo2{
-    background-image:url(image/stick.jpg);
-    background-position:center;
-    background-repeat:no-repeat;
     background-size:50vw;
 }
 #photo3{
-    background-image:url(image/skates.jpg);
-    background-position:center;
-    background-repeat:no-repeat;
     background-size:50vw;
 }
 #photo4{
-    background-image:url(image/helmet.jpg);
-    background-position:center;
-    background-repeat:no-repeat;
     background-size:50vw;
 }
 #photo5{
-    background-image:url(image/рфе1.jpg);
-    background-position:center;
-    background-repeat:no-repeat;
     background-size:50vw;
 }
 #photo6{
-    background-image:url(image/def.jpeg);
-    background-position:center;
-    background-repeat:no-repeat;
     background-size:50vw;
 }
 #photo7{
-    background-image:url(image/puck.jpg);
-    background-position:center;
-    background-repeat:no-repeat;
     background-size:50vw;
 }
 #photo8{
-    background-image:url(image/retro.jpg);
-    background-position:center;
-    background-repeat:no-repeat;
     background-size:50vw;
 }
 #photo9{
-    background-image:url(image/t-shirt.jpg);
-    background-position:center;
-    background-repeat:no-repeat;
     background-size:50vw;
 }
 #photo10{
-    background-image:url(image/jersey2.jpg);
-    background-position:center;
-    background-repeat:no-repeat;
     background-size:50vw;
 }
 #photo11{
-    background-image:url(image/hoodie.jfif);
-    background-position:center;
-    background-repeat:no-repeat;
     background-size:50vw;
 }
 #photo12{
-    background-image:url(image/nakolenniki.jpg);
-    background-position:center;
-    background-repeat:no-repeat;
     background-size:50vw;
 }
 #photo13{
-    background-image:url(image/24134_1.jpg);
-    background-position:center;
-    background-repeat:no-repeat;
     background-size:50vw;
 }
 #photo14{
-    background-image:url(image/sherw.jpg);
-    background-position:center;
-    background-repeat:no-repeat;
     background-size:50vw;
 }
 #photo15{
-    background-image:url(image/2nhl.jpg);
-    background-position:center;
-    background-repeat:no-repeat;
     background-size:50vw;
 }
 #photo16{
-    background-image:url(image/ыефь.jpg);
-    background-position:center;
-    background-repeat:no-repeat;
     background-size:50vw;
 }
 #photo17{
-    background-image:url(image/ski.jpg);
-    background-position:center;
-    background-repeat:no-repeat;
     background-size:50vw;
 }
 #photo18{
-    background-image:url(image/cards.jfif);
-    background-position:center;
-    background-repeat:no-repeat;
     background-size:50vw;
 }
 }
